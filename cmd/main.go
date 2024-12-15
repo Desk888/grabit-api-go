@@ -1,14 +1,24 @@
 package main
 
 import (
-	"fmt"
 	"grabit-api-go/config"
 	"log"
-	"net/http"
-	"grabit-api-go/routes"
+	"grabit-api-go/internal/routes"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	// Add code, after implementing db and models.
+	// Initialise Database
+	config.InitDB()
+	
+	// Initialise Gin Router
+	r := gin.Default()
+
+	// Register routes
+	routes.RegisterRoutes(r)
+
+	// Run the server
+	if err := r.Run(":8080"); err != nil {
+		log.Fatalf("Failed to run server: %v", err)
+	}
 }
