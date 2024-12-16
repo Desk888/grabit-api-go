@@ -3,7 +3,7 @@ package config
 import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"grabit-api-go/models"
+	"grabit-api-go/internal/models"
 	"log"
 	"os"
 	"fmt"

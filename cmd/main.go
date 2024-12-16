@@ -1,7 +1,7 @@
 package main
 
 import (
-	"grabit-api-go/config"
+	"grabit-api-go/internal/config"
 	"log"
 	"grabit-api-go/internal/routes"
 	"github.com/gin-gonic/gin"
