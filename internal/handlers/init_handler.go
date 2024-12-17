@@ -1,16 +1,9 @@
-package routes
+package handlers
 
 import (
 	"fmt"
-	// "net/http"
 	"github.com/gin-gonic/gin"
-	// "grabit-api-go/config"
-	// "grabit-api-go/models"
 )
-
-func RegisterRoutes(r *gin.Engine) {
-	r.GET("/init", GetInit)
-}
 
 func GetInit(c *gin.Context) {
 	fmt.Println("Init Route Called")

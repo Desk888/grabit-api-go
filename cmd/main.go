@@ -15,7 +15,7 @@ func main() {
 	r := gin.Default()
 
 	// Register routes
-	routes.RegisterRoutes(r)
+	routes.InitRoutes(r)
 
 	// Run the server
 	if err := r.Run(":8080"); err != nil {
